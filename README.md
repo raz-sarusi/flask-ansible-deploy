@@ -30,15 +30,19 @@ ansible/
 ## How to Use
 
 ### 1: Update the inventory file
-```ini
+
 [web]
 server1 ansible_host=<YOUR_SERVER_PUBLIC_IP> ansible_user=ubuntu ansible_ssh_private_key_file=~/ansible.pem
+
+
 ### Step 2: Run the Playbook
 
 Run the following commands from the control node (your local machine or the Ansible server):
 
 cd ansible
+
 ansible-playbook site.yml -i inventory
+
 
 ### Step 3: Access Your Application
 
@@ -48,3 +52,14 @@ http://<YOUR_SERVER_PUBLIC_IP>:8000/
 
 
 You should see your Flask application running.
+
+
+What I Learned
+---
+-Automating server configuration and deployments with Ansible
+
+-Running Flask apps in production using Gunicorn and systemd
+
+-Debugging permission, path, and database (SQLite) issues on Linux
+
+-Structuring reusable playbooks for consistent DevOps automation
